@@ -4,8 +4,6 @@ import numpy as np
 from PIL import Image
 from detector import process_image, process_video, set_zone
 import os
-import shutil
-import subprocess
 import tempfile
 
 # --------------------------------------------------
@@ -77,21 +75,6 @@ if mode == "Image Analysis":
     st.divider()
 
 # --------------------------------------------------
-# DEBUG PANEL (expander — visible on Cloud for diagnosis)
-# --------------------------------------------------
-
-with st.expander("🔧 System Debug Info"):
-    ffmpeg_path = shutil.which("ffmpeg")
-    st.write(f"**ffmpeg path:** `{ffmpeg_path}`")
-    st.write(f"**tmp dir:** `{tempfile.gettempdir()}`")
-    st.write(f"**tmp writable:** `{os.access(tempfile.gettempdir(), os.W_OK)}`")
-    if ffmpeg_path:
-        r = subprocess.run([ffmpeg_path, "-version"], capture_output=True, text=True)
-        st.code(r.stdout.split("\n")[0])
-    else:
-        st.error("ffmpeg NOT found — video will not play in browser. Add packages.txt with 'ffmpeg' to your repo.")
-
-# --------------------------------------------------
 # IMAGE MODE
 # --------------------------------------------------
 
@@ -155,12 +138,6 @@ else:
                     input_path, mode=type_, conf=conf
                 )
 
-            # --- Diagnostic output ---
-            st.write(f"**Output path:** `{processed_path}`")
-            st.write(f"**File exists:** `{os.path.exists(processed_path)}`")
-            if os.path.exists(processed_path):
-                st.write(f"**File size:** `{os.path.getsize(processed_path):,} bytes`")
-
             if not os.path.exists(processed_path):
                 st.error("Processing failed — output file not found.")
             elif os.path.getsize(processed_path) == 0:
@@ -183,8 +160,6 @@ else:
                         st.video(f.read())
 
                 st.success(
-                    f"Done! {total_objects} objects detected, "
-                    f"{total_threats} high-risk threats. "
                     f"Output: {os.path.getsize(processed_path) / 1024:.1f} KB"
                 )
 
