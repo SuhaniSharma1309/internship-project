@@ -110,21 +110,18 @@ Dataset Collection -> Data Preprocessing -> Data Annotation -> Model Training ->
 
 ### Sample Detection Results
 
-#### Detection Example 1
 
-![Detection Result 1](images/pic1.png)
-
----
-
-#### Detection Example 2
-
-![Detection Result 2](images/pic2.png)
+![Detection Result 1](/pic1.png)
 
 ---
 
-#### Detection Example 3
 
-![Detection Result 3](images/pic3.png)
+![Detection Result 2](/pic2.png)
+
+---
+
+
+![Detection Result 3](/pic3.png)
 
 ---
 
