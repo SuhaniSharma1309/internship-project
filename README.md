@@ -9,6 +9,14 @@ The primary focus of the project is image-based surveillance, while video-based 
 
 The system supports detection of aerial and ground objects, visualizes detections using bounding boxes, predicts threat levels, and provides detailed detection information for analysis and decision-making.
 
+## Live Demo
+
+### Streamlit Application
+🔗 [Launch Application](https://threatdetector.streamlit.app/)
+
+### Demo Video
+🎥 [Watch Demo Video](https://drive.google.com/file/d/1ZGM1bbfxdn_PCYGe4wjcVgGy91OacDHm/view?usp=sharing)
+
 ---
 
 ## Features
