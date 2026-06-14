@@ -9,3 +9,4 @@ pandas
 matplotlib
 imageio[ffmpeg]
 plotly
+streamlit-image-select
