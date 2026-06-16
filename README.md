@@ -15,7 +15,7 @@ The system supports detection of aerial and ground objects, visualizes detection
 🔗 [Launch Application](https://threatdetector.streamlit.app/)
 
 ### Demo Video
-🎥 [Watch Demo Video](https://drive.google.com/file/d/1ZGM1bbfxdn_PCYGe4wjcVgGy91OacDHm/view?usp=sharing)
+🎥 [Watch Demo Video](https://drive.google.com/file/d/1x9UE_cRnihb1giU_EIayc_2C38vM8h3J/view?usp=sharing)
 
 ---
 
